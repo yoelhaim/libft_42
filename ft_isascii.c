@@ -6,14 +6,12 @@
 /*   By: yoelhaim <yoelhaim@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 11:38:43 by yoelhaim          #+#    #+#             */
-/*   Updated: 2021/11/01 12:07:24 by yoelhaim         ###   ########.fr       */
+/*   Updated: 2021/11/01 13:08:51 by yoelhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isascii(int c)
-{
-	int	i;
-	
+{	
 	if(c < 1 || c > 127)
 			return (0);
 	return (1);

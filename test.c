@@ -10,7 +10,7 @@
 int main(int ac, char **av)
 {
 
-	printf("%c", ft_tolower(70));
+	printf("%c", ft_tolower('$'));
 	//printf("%d", ft_strlen(av[1]));
 //	printf("%d", ft_isprint(127));
 
