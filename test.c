@@ -9,12 +9,14 @@
 #include "toupper.c"
 #include "tolower.c"
 #include "atoi.c"
+#include "strchr.c"
+#include "strrchr.c"
 int main(int ac, char **av)
 {
 
 	//printf("%c", ft_tolower('$'));
 //	printf("%d", ft_atoi(av[1]));
-  printf("%s", strrchr(av[1], 'a'));
+  printf("%s", ft_strrchr(av[1], 'a'));
 //	printf("%d", ft_isprint(127));
 
 
