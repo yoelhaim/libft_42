@@ -3,22 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoelhaim <yoelhaim@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 10:31:22 by yoelhaim          #+#    #+#             */
-/*   Updated: 2021/11/01 10:40:05 by yoelhaim         ###   ########.fr       */
+/*   Updated: 2021/11/02 10:26:53 by yoelhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(char *str)
+#include "libft.h"
+
+size_t	ft_isalnum(char *str)
 {
-	int i;
-	
-	i =  0;
-	while(str[i])
+	size_t	i;
+
+	i = 0;
+	while (str[i])
 	{
-		if(str[i] < '0' || str[i] > '9')
-			return (0);;
+		if (str[i] < '0' || str[i] > '9')
+			return (0);
 		i++;
 	}
 	return (1);

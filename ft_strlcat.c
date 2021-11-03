@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlcat.c                                          :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoelhaim <yoelhaim@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 21:01:41 by yoelhaim          #+#    #+#             */
-/*   Updated: 2021/11/01 21:02:02 by yoelhaim         ###   ########.fr       */
+/*   Updated: 2021/11/03 09:39:53 by yoelhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	len(char *s)
+#include "libft.h"
+
+size_t	len(const char *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])
@@ -20,26 +22,26 @@ int	len(char *s)
 	return (i);
 }
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+size_t	ft_strlcat(char *  dst, const char *  src, size_t dstsize)
 {
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	len_src;
-	unsigned int	len_dest;
+	size_t	i;
+	size_t	j;
+	size_t	len_src;
+	size_t	len_dest;
 
 	len_src = len(src);
-	len_dest = len(dest);
-	if (len_dest > (size - 1) || size == 0)
-		return (size + len_src);
+	len_dest = len(dst);
+	if (len_dest > (dstsize - 1) || dstsize == 0)
+		return (dstsize + len_src);
 	i = len_dest;
 	j = 0;
-	while (i < size - 1 && src[j])
+	while (i < dstsize - 1 && src[j])
 	{
-		dest[i] = src[j];
+		dst[i] = src[j];
 		i++;
 		j++;
 	}
-	dest[i] = '\0';
+	dst[i] = '\0';
 	return (len_src + len_dest);
 }
 /*
@@ -56,5 +58,5 @@ int main()
 	else
 		printf("false \n");
 	printf("%s\n", dest);
-	
+
 }*/

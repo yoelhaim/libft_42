@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoelhaim <yoelhaim@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 12:37:05 by yoelhaim          #+#    #+#             */
-/*   Updated: 2021/11/01 13:08:27 by yoelhaim         ###   ########.fr       */
+/*   Updated: 2021/11/02 10:45:56 by yoelhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+#include "libft.h"
+
+size_t	ft_toupper(int c)
 {
-	if(c >= 97 && c <= 122)
+	if (c >= 97 && c <= 122)
 		c -= 32;
 	else
 		c = c;

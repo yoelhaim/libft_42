@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoelhaim <yoelhaim@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 11:38:43 by yoelhaim          #+#    #+#             */
-/*   Updated: 2021/11/01 13:08:51 by yoelhaim         ###   ########.fr       */
+/*   Updated: 2021/11/02 10:27:34 by yoelhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
-{	
-	if(c < 1 || c > 127)
-			return (0);
+#include "libft.h"
+
+size_t	ft_isascii(int c)
+{
+	if (c < 1 || c > 127)
+		return (0);
 	return (1);
 }
