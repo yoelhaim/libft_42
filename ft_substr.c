@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yoelhaim <yoelhaim@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 12:37:05 by yoelhaim          #+#    #+#             */
-/*   Updated: 2021/11/05 12:33:19 by yoelhaim         ###   ########.fr       */
+/*   Created: 2021/11/04 10:15:06 by yoelhaim          #+#    #+#             */
+/*   Updated: 2021/11/04 10:22:24 by yoelhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
-int	ft_toupper(int c)
+char		*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	if (c >= 97 && c <= 122)
-		c -= 32;
-	else
-		c = c;
-	return (c);
+	size_t	i;
+
+	i = 0;
+
 }

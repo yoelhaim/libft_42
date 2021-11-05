@@ -6,22 +6,15 @@
 /*   By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 10:01:05 by yoelhaim          #+#    #+#             */
-/*   Updated: 2021/11/02 10:27:20 by yoelhaim         ###   ########.fr       */
+/*   Updated: 2021/11/04 16:37:52 by yoelhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_isalpha(char *c)
+int	ft_isalpha(int c)
 {
-	size_t	i;
-
-	i = 0;
-	while (c[i])
-	{
-		if ((c[i] < 'a' || c[i] > 'z') && (c[i] < 'A' || c[i] > 'Z'))
-			return (0);
-		i++;
-	}
+	if ((c < 'a' || c > 'z') && (c < 'A' || c > 'Z'))
+		return (0);
 	return (1);
 }

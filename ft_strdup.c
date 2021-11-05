@@ -6,7 +6,7 @@
 /*   By: yoelhaim <yoelhaim@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 09:55:33 by yoelhaim          #+#    #+#             */
-/*   Updated: 2021/11/03 10:35:50 by yoelhaim         ###   ########.fr       */
+/*   Updated: 2021/11/04 16:54:32 by yoelhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,20 @@
 
 char	*ft_strdup(const char *s1)
 {
-	char *dup;
-	size_t i;
+	char	*dup;
+	size_t	i;
 	size_t	len_str;
 
 	i = 0;
-	len_str = ft_strlen(s1)+1;
-
+	len_str = ft_strlen(s1) + 1;
 	dup = malloc(len_str);
-	if(!dup)
+	if (!dup)
 		return (NULL);
-	while(s1[i])
+	while (s1[i])
 	{
 		dup[i] = s1[i];
 		i++;
 	}
-	dup[i]= '\0';
+	dup[i] = '\0';
 	return (dup);
 }
-

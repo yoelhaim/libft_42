@@ -6,7 +6,7 @@
 /*   By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 16:37:51 by yoelhaim          #+#    #+#             */
-/*   Updated: 2021/11/02 12:50:56 by yoelhaim         ###   ########.fr       */
+/*   Updated: 2021/11/04 16:59:35 by yoelhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strchr(const char *s, int c)
 		}
 		i++;
 	}
-	if(c == '\0')
+	if (c == '\0')
 	{
 		return ((char *)s + i);
 	}

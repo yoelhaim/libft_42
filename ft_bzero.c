@@ -6,7 +6,7 @@
 /*   By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 18:01:58 by yoelhaim          #+#    #+#             */
-/*   Updated: 2021/11/03 12:28:12 by yoelhaim         ###   ########.fr       */
+/*   Updated: 2021/11/04 16:33:37 by yoelhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,13 @@
 void	ft_bzero(void *s, size_t n)
 {
 	size_t	i;
+	char	*str;
 
-	char		*str;
 	if (n == 0)
 		return ;
 	str = (char *)s;
-
 	i = 0;
-	while(i < n)
+	while (i < n)
 	{
 		str[i] = 0;
 		i++;
