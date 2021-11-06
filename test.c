@@ -6,7 +6,7 @@
 /*   By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 10:48:19 by yoelhaim          #+#    #+#             */
-/*   Updated: 2021/11/05 12:06:05 by yoelhaim         ###   ########.fr       */
+/*   Updated: 2021/11/05 17:56:49 by yoelhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 #include <ctype.h>
 #include <string.h>
 #include <stdlib.h>
-#include "ft_isalnum.c"
-#include "ft_isalpha.c"
-#include "ft_isascii.c"
+// #include "ft_isalnum.c"
+// #include "ft_isalpha.c"
+// #include "ft_isascii.c"
 #include "ft_isprint.c"
 #include "ft_strlen.c"
 #include "ft_toupper.c"
@@ -40,13 +40,14 @@ int main(int ac, char **av)
 	char dest[]="sddwtwyuuytwytywtwyt";
 	char baffur[10];
 // printf("%d", ft_isalpha('@'));
-printf("%d", ft_isalnum('!'));
+// printf("%d", ft_isalnum('!'));
 	//printf("%c", ft_tolower('$'));
 //	printf("%s", strnstr(av[1], av[2],2));
 //  printf("%s", bzero(str, 5));
 //  ft_bzero(str, 5);
 //  printf("%s",calloc(4, 5));
 // printf("%s	\n", str+2);
+printf("%d", ft_atoi("-1234"));
 // printf("%s",ft_memmove(dest ,str,3) );
 //	printf("%d", ft_isprint(127));
 // printf("%d",ft_memcmp("a" ,"b",3) );

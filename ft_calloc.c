@@ -6,7 +6,7 @@
 /*   By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 12:11:02 by yoelhaim          #+#    #+#             */
-/*   Updated: 2021/11/05 11:32:52 by yoelhaim         ###   ########.fr       */
+/*   Updated: 2021/11/05 16:39:32 by yoelhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,12 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	char	*p;
+	size_t	n;
 
-	size = size * count;
-	p = malloc(size);
+	n = size * count;
+	p = malloc(n);
 	if (!p)
 		return (NULL);
-	ft_bzero(p, size);
+	ft_bzero(p, n);
 	return (p);
 }

@@ -6,13 +6,20 @@
 /*   By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 16:05:45 by yoelhaim          #+#    #+#             */
-/*   Updated: 2021/11/05 12:10:18 by yoelhaim         ###   ########.fr       */
+/*   Updated: 2021/11/05 18:03:28 by yoelhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_atoi(const char *str)
+static int	ispase(char c)
+{
+	if (c == 32 || (c >= 9 && c <= 13))
+		return (1);
+	return (0);
+}
+
+int	ft_atoi(const char *str)
 {
 	size_t	i;
 	size_t	n;
@@ -21,7 +28,7 @@ size_t	ft_atoi(const char *str)
 	i = 0;
 	n = 1;
 	r = 0;
-	while (str[i] <= 32 && str[i] >= 127)
+	while (ispase(str[i]))
 		i++;
 	if (str[i] == '-')
 	{

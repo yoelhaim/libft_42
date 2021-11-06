@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   strrstr.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 21:06:21 by yoelhaim          #+#    #+#             */
-/*   Updated: 2021/11/06 10:55:40 by yoelhaim         ###   ########.fr       */
+/*   Created: 2021/11/06 10:38:54 by yoelhaim          #+#    #+#             */
+/*   Updated: 2021/11/06 10:46:16 by yoelhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*fst_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t	i;
-
-	i = 0;
-	if (n == 0)
+	size_t i;
+	size_t j;
+	if (!haystack && !needle)
 		return (0);
-	while (s1[i] && s2[i] && i < n - 1 && s1[i] == s2[i])
-		i++;
-	return ((int)((unsigned char)s1[i] - (unsigned char)s2[i]));
+	if(needle[0] =='\0')
+		return((char *)haystack);
+	i =0;
+	j=0;
+
+
+return ((char *)haystack);
+}
+#include<stdio.h>
+int main()
+{
+	char s[] ="hello every one in 1337";
+	char f[]= "in";
+	printf("%s", fst_strnstr(s,f,20));
 }
