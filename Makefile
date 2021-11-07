@@ -6,7 +6,7 @@
 #    By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/05 11:18:45 by yoelhaim          #+#    #+#              #
-#    Updated: 2021/11/05 20:31:23 by yoelhaim         ###   ########.fr        #
+#    Updated: 2021/11/07 17:06:43 by yoelhaim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,13 @@ SRCS = ft_atoi.c \
 	  ft_putstr_fd.c \
 	  ft_putnbr_fd.c \
 	  ft_substr.c \
+	  ft_strmapi.c \
+	  ft_putendl_fd.c \
+	  ft_strjoin.c \
+	  ft_itoa.c \
+	  ft_striteri.c \
+	  ft_split.c \
+	  ft_strtrim.c \
 
 SRCSBONUS = ft_lstnew.c \
 	  ft_lstsize.c \

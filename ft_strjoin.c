@@ -1,29 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/05 12:44:18 by yoelhaim          #+#    #+#             */
-/*   Updated: 2021/11/06 11:43:44 by yoelhaim         ###   ########.fr       */
+/*   Created: 2021/11/06 19:13:00 by yoelhaim          #+#    #+#             */
+/*   Updated: 2021/11/06 19:20:40 by yoelhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	if (!dst && !src)
+	size_t	i;
+	size_t	j;
+	char	*str;
+
+	str = malloc(sizeof(s1) * ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (!str)
 		return (NULL);
-	if (dst < src)
+	i = 0;
+	j = 0;
+	while (s1[i])
 	{
-		ft_memcpy(dst, src, len);
+		str[j++] = s1[i];
+		i++;
 	}
-	else
+	i = 0;
+	while (s2[i])
 	{
-		while (len--)
-			((unsigned char *)dst)[len] = ((unsigned char *)src)[len];
+		str[j++] = s2[i];
+		i++;
 	}
-	return ((unsigned char *)dst);
+	str[j] = 0;
+	return (str);
 }
+// #include <stdio.h>
+// int main(int ac ,char **av)
+// {
+// 	printf("%s", ft_strjoin(av[1],av[2]));
+// }

@@ -1,29 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/05 12:44:18 by yoelhaim          #+#    #+#             */
-/*   Updated: 2021/11/06 11:43:44 by yoelhaim         ###   ########.fr       */
+/*   Created: 2021/11/06 21:26:20 by yoelhaim          #+#    #+#             */
+/*   Updated: 2021/11/07 16:17:58 by yoelhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	ft_striteri(char *s, void (*f)(unsigned int,
+char*))
 {
-	if (!dst && !src)
-		return (NULL);
-	if (dst < src)
+	size_t	i;
+
+	if (!s || !f)
+		return ;
+	i = 0;
+	while (s[i])
 	{
-		ft_memcpy(dst, src, len);
+		f(i, s + i);
+		i++;
 	}
-	else
-	{
-		while (len--)
-			((unsigned char *)dst)[len] = ((unsigned char *)src)[len];
-	}
-	return ((unsigned char *)dst);
 }
+// char fun (unsigned int i, char s)
+// {
+// 	printf("index %d char %c", i, s);
+// 	return (s -32);
+// }
+// int main()
+// {
+// 	char s[]= "youmer";
+// 	ft_striteri(s,fun);
+// 	printf("%d \n", fun);
+
+// }

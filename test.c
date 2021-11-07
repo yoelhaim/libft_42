@@ -6,7 +6,7 @@
 /*   By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 10:48:19 by yoelhaim          #+#    #+#             */
-/*   Updated: 2021/11/05 17:56:49 by yoelhaim         ###   ########.fr       */
+/*   Updated: 2021/11/06 11:40:38 by yoelhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,10 @@ int main(int ac, char **av)
 //  ft_bzero(str, 5);
 //  printf("%s",calloc(4, 5));
 // printf("%s	\n", str+2);
-printf("%d", ft_atoi("-1234"));
+// printf("%d", ft_atoi("-1234"));
 // printf("%s",ft_memmove(dest ,str,3) );
 //	printf("%d", ft_isprint(127));
-// printf("%d",ft_memcmp("a" ,"b",3) );
+printf("%d",ft_memcmp("abc" ,"abc",3) );
 
 // int i = 0;
 // while(i < 10)

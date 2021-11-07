@@ -1,39 +1,62 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/04 10:15:06 by yoelhaim          #+#    #+#             */
-/*   Updated: 2021/11/06 11:51:10 by yoelhaim         ###   ########.fr       */
+/*   Created: 2021/11/06 19:27:43 by yoelhaim          #+#    #+#             */
+/*   Updated: 2021/11/06 21:25:39 by yoelhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+static int	count_size(int n)
 {
 	size_t	i;
-	size_t	j;
-	char	*str;
 
-	j = 0;
 	i = 0;
-	if (!s)
-		return (NULL);
-	str = (char *)malloc(sizeof(*s) * (len + 1));
-	if (!str)
-		return (NULL);
-	while (s[i])
+	if (n < 0)
+		n *= -1;
+	while (n != 0)
 	{
-		if (i >= start && j < len)
-		{
-			str[j] = s[i];
-			j++;
-		}
+		n /= 10;
 		i++;
 	}
-	str[j] = 0;
+	return (i);
+}
+
+char	*ft_itoa(int n)
+{
+	size_t	i;
+	long	nb;
+	size_t	len;
+	char	*str;
+
+	nb = n;
+	len = count_size(nb);
+	i = 0;
+	if (nb < 0 || len == 0)
+		len++;
+	str = malloc(len);
+	if (!str)
+		return (NULL);
+	if (nb < 0)
+	{
+		nb *= -1;
+		str[0] = '-';
+		i++;
+	}
+	while (len-- > i)
+	{
+		str[len] = (nb % 10) + 48;
+		nb /= 10;
+	}
 	return (str);
 }
+
+// int main()
+// {
+// 	printf("%s", ft_itoa(123));
+// }

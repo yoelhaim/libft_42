@@ -6,7 +6,7 @@
 /*   By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 10:04:34 by yoelhaim          #+#    #+#             */
-/*   Updated: 2021/11/06 10:55:05 by yoelhaim         ###   ########.fr       */
+/*   Updated: 2021/11/07 17:04:19 by yoelhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,14 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdio.h>
 
+// part one
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
-size_t	ft_isascii(int c);
-size_t	ft_isprint(int c);
+int		ft_isascii(int c);
+int		ft_isprint(int c);
 size_t	ft_strlen(const char *str);
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
@@ -39,11 +41,19 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strdup(const char *s1);
 int		ft_atoi(const char *str);
 
-// part 2
+// part two
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *c, int fd);
 void	ft_putnbr_fd(int c,int fd);
-
+char	*ft_strmapi(char const *s, char (*f)(unsigned
+int, char));
+void	ft_putendl_fd(char *s, int fd);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_itoa(int n);
+void	ft_striteri(char *s, void (*f)(unsigned int,
+char*));
+char	**ft_split(char const *s, char c);
+char	*ft_strtrim(char const *s1, char const *set);
 
 #endif

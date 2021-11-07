@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/05 12:44:18 by yoelhaim          #+#    #+#             */
-/*   Updated: 2021/11/06 11:43:44 by yoelhaim         ###   ########.fr       */
+/*   Created: 2021/11/06 15:54:24 by yoelhaim          #+#    #+#             */
+/*   Updated: 2021/11/06 16:17:50 by yoelhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+char	*ft_strmapi(char const *s, char (*f)(unsigned
+int, char))
 {
-	if (!dst && !src)
+	size_t	i;
+	char	*str;
+
+	str = ft_strdup(s);
+	if (!str)
 		return (NULL);
-	if (dst < src)
+	i = 0;
+	while (str[i])
 	{
-		ft_memcpy(dst, src, len);
+		str[i] = (*f)(i, str[i]);
+		i++;
 	}
-	else
-	{
-		while (len--)
-			((unsigned char *)dst)[len] = ((unsigned char *)src)[len];
-	}
-	return ((unsigned char *)dst);
+	return (str);
 }
