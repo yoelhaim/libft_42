@@ -6,7 +6,7 @@
 #    By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/05 11:18:45 by yoelhaim          #+#    #+#              #
-#    Updated: 2021/11/07 17:06:43 by yoelhaim         ###   ########.fr        #
+#    Updated: 2021/11/08 16:53:25 by yoelhaim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,6 +48,9 @@ SRCS = ft_atoi.c \
 	  ft_striteri.c \
 	  ft_split.c \
 	  ft_strtrim.c \
+	    ft_lstnew.c \
+	  ft_lstadd_front.c \
+	  ft_lstadd_back.c \
 
 SRCSBONUS = ft_lstnew.c \
 	  ft_lstsize.c \
@@ -59,6 +62,10 @@ SRCSBONUS = ft_lstnew.c \
 	  ft_lstiter.c \
 	  ft_lstmap.c \
 	  ft_lstrev.c \
+
+
+
+
 
 OBJS = $(SRCS:.c=.o)
 
@@ -73,8 +80,8 @@ all:	#$(NAME)
 
 $(NAME): $(OBJS) $(LIBFT)
 		ar rc $(NAME) $(OBJS)
-		ranlib $(NAME)
-		@echo "Libft compiled"
+		# ranlib $(NAME)
+		@echo "Libft compiled $(NAME) \n obj => $(OBJS)"
 
 bonus:	$(OBJSBONUS)
 		ar rc $(NAME) $(OBJSBONUS)

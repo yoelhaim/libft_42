@@ -1,46 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/06 19:13:00 by yoelhaim          #+#    #+#             */
-/*   Updated: 2021/11/07 17:46:45 by yoelhaim         ###   ########.fr       */
+/*   Created: 2021/11/08 13:28:37 by yoelhaim          #+#    #+#             */
+/*   Updated: 2021/11/09 16:59:26 by yoelhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+t_list	*ft_lstnew(void *content)
 {
-	size_t	i;
-	size_t	j;
-	char	*str;
+	t_list	*ls_new;
 
-	if (!s1 || !s2)
+	ls_new = malloc(sizeof(t_list));
+	if (!ls_new)
 		return (NULL);
-	str = malloc(sizeof(s1) * ft_strlen(s1) + ft_strlen(s2) + 1);
-	if (!str)
-		return (NULL);
-	i = 0;
-	j = 0;
-	while (s1[i])
-	{
-		str[j++] = s1[i];
-		i++;
-	}
-	i = 0;
-	while (s2[i])
-	{
-		str[j++] = s2[i];
-		i++;
-	}
-	str[j] = 0;
-	return (str);
+	ls_new->content = content;
+	ls_new->next = NULL;
+	return (ls_new);
 }
-// #include <stdio.h>
-// int main(int ac ,char **av)
-// {
-// 	printf("%s", ft_strjoin(av[1],av[2]));
-// }
+
+int		main(void)
+{
+
+	t_list *head;
+
+	head = ft_lstnew("awbx");
+	head->next = ft_lstnew("king");
+	head->next->next = ft_lstnew("was");
+	head->next->next->next = ft_lstnew("here");
+
+	while (head)
+	{
+		 printf("head => %s , adress => %p\n", head->content, head);
+		head = head->next;
+	}
+}
