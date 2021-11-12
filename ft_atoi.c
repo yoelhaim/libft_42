@@ -6,7 +6,7 @@
 /*   By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 16:05:45 by yoelhaim          #+#    #+#             */
-/*   Updated: 2021/11/05 18:03:28 by yoelhaim         ###   ########.fr       */
+/*   Updated: 2021/11/11 15:42:53 by yoelhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	ft_atoi(const char *str)
 	}
 	else if (str[i] == '+')
 		i++;
-	while (str[i] && str[i] >= '0' && str[i] <= '9')
+	while (str[i] && ft_isdigit(str[i]))
 	{
 		r *= 10;
 		r += str[i] - 48;

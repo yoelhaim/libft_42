@@ -6,7 +6,7 @@
 /*   By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 19:27:43 by yoelhaim          #+#    #+#             */
-/*   Updated: 2021/11/06 21:25:39 by yoelhaim         ###   ########.fr       */
+/*   Updated: 2021/11/12 16:34:02 by yoelhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_itoa(int n)
 	size_t	len;
 	char	*str;
 
-	nb = n;
+	nb = (long)n;
 	len = count_size(nb);
 	i = 0;
 	if (nb < 0 || len == 0)

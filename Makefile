@@ -6,13 +6,14 @@
 #    By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/05 11:18:45 by yoelhaim          #+#    #+#              #
-#    Updated: 2021/11/08 16:53:25 by yoelhaim         ###   ########.fr        #
+#    Updated: 2021/11/12 19:55:34 by yoelhaim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-LIBFT = libft.h
 FLAGS = -Wall -Wextra -Werror
+CRT := ar -crs
+REMOVE := rm -f
 
 SRCS = ft_atoi.c \
 	  ft_bzero.c \
@@ -51,6 +52,8 @@ SRCS = ft_atoi.c \
 	    ft_lstnew.c \
 	  ft_lstadd_front.c \
 	  ft_lstadd_back.c \
+	  ft_lstdelone.c \
+	  ft_lstclear.c \
 
 SRCSBONUS = ft_lstnew.c \
 	  ft_lstsize.c \
@@ -63,39 +66,27 @@ SRCSBONUS = ft_lstnew.c \
 	  ft_lstmap.c \
 	  ft_lstrev.c \
 
+OBJS := $(SRCS:.c=.o)
 
+OBJSB := $(SRCSBONUS:.c=.o)
 
+.PHONY: all clean fclean re
 
+all: $(NAME)
 
-OBJS = $(SRCS:.c=.o)
+bonus: $(OBJSB)
+	$(CRT) $(NAME) $^
 
-OBJSBONUS = $(SRCSBONUS:.c=.o)
-
-PARALLEL ?= -j
-
-.PHONY: all clean fclean re bonus
-
-all:	#$(NAME)
-		$(MAKE) $(PARALLEL) $(NAME)
-
-$(NAME): $(OBJS) $(LIBFT)
-		ar rc $(NAME) $(OBJS)
-		# ranlib $(NAME)
-		@echo "Libft compiled $(NAME) \n obj => $(OBJS)"
-
-bonus:	$(OBJSBONUS)
-		ar rc $(NAME) $(OBJSBONUS)
-		@ranlib $(NAME)
-
-%.o: %.c $(LIBFT)
-		gcc $(FLAGS) -c $< -o $@
+$(NAME): $(OBJS)
+	$(CRT) $@ $^
+	@echo "\n kkkkkkkk => $(CRT) \n"
+%.o: %.c
+	gcc $(FLAGS) -c $< -o $@
 
 clean:
-		@/bin/rm -f $(OBJS) $(OBJSBONUS)
-		@echo "Libft cleaned"
+	$(REMOVE) $(OBJS) $(OBJSB) $(NAME)
 
-fclean:	clean
-		@/bin/rm -f $(NAME)
-		@echo "Libft full cleaned"
+fclean: clean
+	$(REMOVE) $(NAME)
 
-re:		fclean all
+re: fclean all
