@@ -6,7 +6,7 @@
 /*   By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 19:27:43 by yoelhaim          #+#    #+#             */
-/*   Updated: 2021/11/12 16:34:02 by yoelhaim         ###   ########.fr       */
+/*   Updated: 2021/11/13 13:12:14 by yoelhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,3 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
-
-// int main()
-// {
-// 	printf("%s", ft_itoa(123));
-// }
