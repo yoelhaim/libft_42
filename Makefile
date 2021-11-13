@@ -6,14 +6,14 @@
 #    By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/05 11:18:45 by yoelhaim          #+#    #+#              #
-#    Updated: 2021/11/12 19:55:34 by yoelhaim         ###   ########.fr        #
+#    Updated: 2021/11/13 12:58:24 by yoelhaim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 FLAGS = -Wall -Wextra -Werror
 CRT := ar -crs
-REMOVE := rm -f
+REMOVE := rm -rf
 
 SRCS = ft_atoi.c \
 	  ft_bzero.c \
@@ -49,28 +49,30 @@ SRCS = ft_atoi.c \
 	  ft_striteri.c \
 	  ft_split.c \
 	  ft_strtrim.c \
-	    ft_lstnew.c \
+	  ft_lstnew.c \
 	  ft_lstadd_front.c \
 	  ft_lstadd_back.c \
 	  ft_lstdelone.c \
-	  ft_lstclear.c \
-
-SRCSBONUS = ft_lstnew.c \
 	  ft_lstsize.c \
 	  ft_lstlast.c \
-	  ft_lstadd_back.c \
-	  ft_lstadd_front.c \
-	  ft_lstdelone.c \
 	  ft_lstclear.c \
 	  ft_lstiter.c \
-	  ft_lstmap.c \
-	  ft_lstrev.c \
+
+
+SRCSBONUS = ${SRCS} \
+	ft_lstnew.c \
+	ft_lstsize.c \
+	ft_lstlast.c \
+	ft_lstadd_back.c \
+	ft_lstadd_front.c \
+	ft_lstdelone.c \
+	ft_lstclear.c \
+	ft_lstiter.c \
+	ft_lstrev.c \
 
 OBJS := $(SRCS:.c=.o)
 
 OBJSB := $(SRCSBONUS:.c=.o)
-
-.PHONY: all clean fclean re
 
 all: $(NAME)
 
@@ -79,12 +81,11 @@ bonus: $(OBJSB)
 
 $(NAME): $(OBJS)
 	$(CRT) $@ $^
-	@echo "\n kkkkkkkk => $(CRT) \n"
 %.o: %.c
 	gcc $(FLAGS) -c $< -o $@
 
 clean:
-	$(REMOVE) $(OBJS) $(OBJSB) $(NAME)
+	$(REMOVE) $(OBJS) $(OBJSB)
 
 fclean: clean
 	$(REMOVE) $(NAME)

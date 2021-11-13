@@ -6,7 +6,7 @@
 /*   By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 16:48:43 by yoelhaim          #+#    #+#             */
-/*   Updated: 2021/11/07 17:06:34 by yoelhaim         ###   ########.fr       */
+/*   Updated: 2021/11/13 13:12:56 by yoelhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(str, s1 + start, end - start + 2);
 	return (str);
 }
-// int main()
-// {
-// 	char s1[]= "#& salam # #";
-// 	char set[]= "#";
-// 	printf("%s", ft_strtrim(s1,set));
-// }

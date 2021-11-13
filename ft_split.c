@@ -6,7 +6,7 @@
 /*   By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 15:30:09 by yoelhaim          #+#    #+#             */
-/*   Updated: 2021/11/12 11:59:17 by yoelhaim         ###   ########.fr       */
+/*   Updated: 2021/11/13 13:13:57 by yoelhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,14 +77,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (array);
 }
-// int main()
-// {
-// 	char **arr = ft_split("helloe every one", ' ');
-// 	int i = 0;
-// 	while (arr[i] != NULL)
-// 	{
-// 		printf("%s", arr[i]);
-// 		i++;
-// 	}
-
-// }

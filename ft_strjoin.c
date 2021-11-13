@@ -6,7 +6,7 @@
 /*   By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 19:13:00 by yoelhaim          #+#    #+#             */
-/*   Updated: 2021/11/07 17:46:45 by yoelhaim         ###   ########.fr       */
+/*   Updated: 2021/11/13 13:13:18 by yoelhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str[j] = 0;
 	return (str);
 }
-// #include <stdio.h>
-// int main(int ac ,char **av)
-// {
-// 	printf("%s", ft_strjoin(av[1],av[2]));
-// }
