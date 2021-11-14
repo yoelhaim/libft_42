@@ -6,13 +6,13 @@
 /*   By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 19:27:43 by yoelhaim          #+#    #+#             */
-/*   Updated: 2021/11/13 13:12:14 by yoelhaim         ###   ########.fr       */
+/*   Updated: 2021/11/14 12:03:17 by yoelhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	count_size(int n)
+static int	count_size(long long n)
 {
 	size_t	i;
 
@@ -39,14 +39,14 @@ char	*ft_itoa(int n)
 	i = 0;
 	if (nb < 0 || len == 0)
 		len++;
-	str = malloc(len);
+	str = malloc(len + 1);
 	if (!str)
 		return (NULL);
+	str[len] = '\0';
 	if (nb < 0)
 	{
 		nb *= -1;
-		str[0] = '-';
-		i++;
+		str[i++] = '-';
 	}
 	while (len-- > i)
 	{
