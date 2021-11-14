@@ -6,13 +6,13 @@
 /*   By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 12:50:10 by yoelhaim          #+#    #+#             */
-/*   Updated: 2021/11/13 12:54:45 by yoelhaim         ###   ########.fr       */
+/*   Updated: 2021/11/13 16:48:36 by yoelhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	while (lst)
 	{
