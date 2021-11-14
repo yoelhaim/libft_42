@@ -6,11 +6,22 @@
 /*   By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 15:30:09 by yoelhaim          #+#    #+#             */
-/*   Updated: 2021/11/13 13:13:57 by yoelhaim         ###   ########.fr       */
+/*   Updated: 2021/11/14 13:27:53 by yoelhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static void	free_array(char **arr)
+{
+	size_t	i;
+
+	i = 0;
+	while (arr[i])
+		free(arr[i++]);
+	free(arr);
+}
+
 
 static	int	count_size(char const *s, char c)
 {
@@ -73,6 +84,7 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	if (!fill_array(array, s, c))
 	{
+		free_array(array);
 		return (NULL);
 	}
 	return (array);
