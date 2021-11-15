@@ -6,7 +6,7 @@
 /*   By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 15:30:09 by yoelhaim          #+#    #+#             */
-/*   Updated: 2021/11/14 13:27:53 by yoelhaim         ###   ########.fr       */
+/*   Updated: 2021/11/14 13:29:40 by yoelhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ static void	free_array(char **arr)
 		free(arr[i++]);
 	free(arr);
 }
-
 
 static	int	count_size(char const *s, char c)
 {
