@@ -6,7 +6,7 @@
 /*   By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 16:37:51 by yoelhaim          #+#    #+#             */
-/*   Updated: 2021/11/04 16:59:35 by yoelhaim         ###   ########.fr       */
+/*   Updated: 2021/11/15 20:36:44 by yoelhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,9 @@ char	*ft_strchr(const char *s, int c)
 
 	i = 0;
 	while (s[i])
-	{
-		if (s[i] == c)
-		{
-			return ((char *) s + i);
-		}
-		i++;
-	}
-	if (c == '\0')
-	{
+		if (s[i++] == (char)c)
+			return ((char *)s + i - 1);
+	if (!c)
 		return ((char *)s + i);
-	}
-	return (0);
+	return (NULL);
 }
