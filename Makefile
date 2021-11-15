@@ -6,7 +6,7 @@
 #    By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/05 11:18:45 by yoelhaim          #+#    #+#              #
-#    Updated: 2021/11/13 12:58:24 by yoelhaim         ###   ########.fr        #
+#    Updated: 2021/11/15 22:58:21 by yoelhaim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,6 +49,9 @@ SRCS = ft_atoi.c \
 	  ft_striteri.c \
 	  ft_split.c \
 	  ft_strtrim.c \
+
+
+SRCSBONUS = ${SRCS} \
 	  ft_lstnew.c \
 	  ft_lstadd_front.c \
 	  ft_lstadd_back.c \
@@ -57,18 +60,6 @@ SRCS = ft_atoi.c \
 	  ft_lstlast.c \
 	  ft_lstclear.c \
 	  ft_lstiter.c \
-
-
-SRCSBONUS = ${SRCS} \
-	ft_lstnew.c \
-	ft_lstsize.c \
-	ft_lstlast.c \
-	ft_lstadd_back.c \
-	ft_lstadd_front.c \
-	ft_lstdelone.c \
-	ft_lstclear.c \
-	ft_lstiter.c \
-	ft_lstrev.c \
 
 OBJS := $(SRCS:.c=.o)
 
@@ -82,7 +73,7 @@ bonus: $(OBJSB)
 $(NAME): $(OBJS)
 	$(CRT) $@ $^
 %.o: %.c
-	gcc $(FLAGS) -c $< -o $@
+	cc $(FLAGS) -c $< -o $@
 
 clean:
 	$(REMOVE) $(OBJS) $(OBJSB)
