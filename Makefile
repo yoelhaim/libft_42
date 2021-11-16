@@ -6,7 +6,7 @@
 #    By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/05 11:18:45 by yoelhaim          #+#    #+#              #
-#    Updated: 2021/11/15 22:58:21 by yoelhaim         ###   ########.fr        #
+#    Updated: 2021/11/16 21:15:02 by yoelhaim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,6 +74,7 @@ $(NAME): $(OBJS)
 	$(CRT) $@ $^
 %.o: %.c
 	cc $(FLAGS) -c $< -o $@
+	#@echo "$<"
 
 clean:
 	$(REMOVE) $(OBJS) $(OBJSB)
