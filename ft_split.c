@@ -6,7 +6,7 @@
 /*   By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 15:30:09 by yoelhaim          #+#    #+#             */
-/*   Updated: 2021/11/17 09:09:32 by yoelhaim         ###   ########.fr       */
+/*   Updated: 2021/11/18 14:03:13 by yoelhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ char	**ft_split(char const *s, char c)
 	if (!fill_array(array, s, c))
 	{
 		free_array(array);
-		return (NULL);
+		 return (NULL);
 	}
 	return (array);
 }

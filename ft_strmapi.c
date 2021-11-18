@@ -6,7 +6,7 @@
 /*   By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 15:54:24 by yoelhaim          #+#    #+#             */
-/*   Updated: 2021/11/07 17:45:44 by yoelhaim         ###   ########.fr       */
+/*   Updated: 2021/11/18 13:56:26 by yoelhaim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,9 @@ int, char))
 	i = 0;
 	while (str[i])
 	{
-		str[i] = (*f)(i, str[i]);
+		str[i] = f(i, s[i]);
 		i++;
 	}
+	str[i] = '\0';
 	return (str);
 }
