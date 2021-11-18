@@ -6,7 +6,7 @@
 #    By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/05 11:18:45 by yoelhaim          #+#    #+#              #
-#    Updated: 2021/11/16 23:53:24 by yoelhaim         ###   ########.fr        #
+#    Updated: 2021/11/18 23:05:01 by yoelhaim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,13 +69,13 @@ all: $(NAME)
 
 bonus: $(OBJSB)
 	$(CRT) $(NAME) $^
-	@echo "bunuss ======>$^"
+
 
 $(NAME): $(OBJS)
 	$(CRT) $@ $^
 %.o: %.c
 	cc $(FLAGS) -c $< -o $@
-	@echo " ======>$< in $@"
+
 
 clean:
 	$(REMOVE) $(OBJS) $(OBJSB)
