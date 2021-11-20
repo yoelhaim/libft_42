@@ -6,12 +6,13 @@
 #    By: yoelhaim <yoelhaim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/05 11:18:45 by yoelhaim          #+#    #+#              #
-#    Updated: 2021/11/18 23:05:01 by yoelhaim         ###   ########.fr        #
+#    Updated: 2021/11/20 13:52:26 by yoelhaim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 FLAGS = -Wall -Wextra -Werror
+INC = libft.h
 CRT := ar -crs
 REMOVE := rm -rf
 
@@ -71,7 +72,7 @@ bonus: $(OBJSB)
 	$(CRT) $(NAME) $^
 
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) $(INC)
 	$(CRT) $@ $^
 %.o: %.c
 	cc $(FLAGS) -c $< -o $@
